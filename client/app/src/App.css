@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+.brand-logo{
+    font-family: 'Grand Hotel', cursive;
+}
+.card{
+    padding: 20px;
+}
+.card-parent{
+    margin-top: 25px;
+     
+    max-width: 400px;
+}
+
+h2{
+    font-family: 'Grand Hotel', cursive;
+}
+
+ /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #42a5f5 !important;
+     box-shadow: 0 1px 0 0 #42a5f5 !important;
+   }
+
+.profile-img{
+    height: 160px;
+    width: 160px;
+}
+.left-profile{
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0px;
+    border-bottom: 1px solid gray;
+}
+.profile-initials{
+    display: flex;
+    justify-content: space-between ;
+    width: 108%;
+}
+.profile-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gallery-item{
+    width: 30%;
+    /* height: 50vh; */
+}
+.profile{
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.home-card{
+    width: 50%;
+    max-width: 500px;
+    height: max-content;
+    margin: 26px auto;
+}
+.heart-icon{
+    color: red;
+}
+.create-post-card{
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
