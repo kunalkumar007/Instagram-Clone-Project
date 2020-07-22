@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
+import {userContext} from "../../App"
 import axios from "axios";
 import M from "materialize-css";
 
 export default function Login() {
+  const {state,dispatch}=useContext(userContext);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
@@ -30,6 +32,7 @@ export default function Login() {
         // save the tokens in local items ...
         localStorage.setItem("auth_token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
+        dispatch({type:"USER",payload:res.data.user})
         history.push("/"); //redirect using useHistory();
       })
       .catch((err) => {
@@ -53,7 +56,7 @@ export default function Login() {
           />
 
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

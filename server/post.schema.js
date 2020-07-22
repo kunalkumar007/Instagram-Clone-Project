@@ -12,8 +12,23 @@ const postSchema = new mongoose.Schema({
   },
   photo: {
     type: String,
-    default:"no pics"
+    default: "no pics",
   },
+  likes: [
+    {
+      type: ObjectId,
+      ref: "users",
+    },
+  ],
+  comments: [
+    {
+      text: String,
+      postedby: {
+        type: ObjectId,
+        ref: "users",
+      },
+    },
+  ],
   postedby: {
     type: ObjectId, //id of the users
     ref: "users", //schema name we are relating it to ...
